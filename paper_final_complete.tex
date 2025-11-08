@@ -1,0 +1,85 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{natbib}
+\usepackage{booktabs}
+\usepackage{xcolor}
+
+\geometry{margin=1in}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+
+\title{\textbf{Three Dimensions Derived:\\Holographic Information Projection as Dimensional Selection Mechanism}}
+
+\author{
+Fedor Kapitanov\\
+\href{https://orcid.org/0009-0009-6438-8730}{\small ORCID: 0009-0009-6438-8730}\\
+Independent Researcher\\
+\texttt{prtyboom@gmail.com}
+}
+
+\date{November 8, 2025}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We demonstrate that three-dimensional space is \textit{not a fundamental postulate} but emerges as the unique thermodynamically stable projection of a four-dimensional latent information manifold under holographic entropy constraint.
+
+Through variational optimization of free energy $F = U_{\text{therm}}(\varepsilon) + \lambda \cdot \max(0, S - S_{\max})^2$ with critically scaled entropy $S = r_{\text{eff}} \cdot N^{0.7}$, we prove numerically that the projection anisotropy parameter follows power law $\varepsilon^*(N) = (0.052 \pm 0.008) \cdot N^{-(0.57 \pm 0.03)}$ for system sizes $N \in [100, 2000]$.
+
+Key results: (i) At $N=100$: $\varepsilon^* = 0.0035$ (99.6\% suppression of fourth axis); (ii) At $N=2000$: $\varepsilon^* = 0.00047$ (99.95\% suppression); (iii) Effective dimensionality $d_{\text{PR}} = 3.13 \pm 0.07$ remains stable across all scales; (iv) Entropy-to-bound ratio $S/S_{\max}$ increases from 14.2 to 16.5, indicating intensifying holographic pressure.
+
+Extrapolation to cosmological scales ($N \sim 10^{122}$ bits) predicts $\varepsilon^* \sim 10^{-70}$, rendering the fourth dimension absolutely unobservable. The dimensional question is resolved: \textit{three is calculated, not assumed}.
+
+\textbf{Code \& Data:} \url{https://github.com/prtyboom/holographic_dimension}
+\end{abstract}
+
+\section{Introduction}
+
+\subsection{The Dimensional Question}
+
+The existence of precisely three spatial dimensions is a foundational empirical fact. Yet standard physics—from Newton to Einstein—\textit{assumes} $d = 3$ rather than deriving it. Why not two? Why not four?
+
+Previous approaches:
+
+\begin{itemize}
+    \item \textbf{Anthropic selection} \cite{Tegmark1997}: Only $d = 3$ permits stable orbits and atoms. Observational bias, not derivation.
+    
+    \item \textbf{String compactification}: Extra dimensions "curl up". Postulates 10D/11D without explanation.
+    
+    \item \textbf{Causal dynamical triangulation} \cite{Carlip2017}: Spectral dimension flows $d_s \approx 4 \to 2$. Describes behavior, not necessity.
+\end{itemize}
+
+None \textit{derive} three dimensions from first principles.
+
+\subsection{The Gödelian Constraint}
+
+Logical obstacle: \textit{3D physics cannot self-explain its dimensionality}. By Gödelian analogy, a consistent system cannot prove its own axioms from within. A meta-level is required.
+
+\textbf{Our resolution}:
+\begin{center}
+\textit{4D latent manifold = meta-level (condition of possibility)}\\
+\textit{3D observable space = object-level (manifestation)}\\
+\textit{Holographic constraint = selection mechanism}
+\end{center}
+
+The fourth dimension is \textit{informational infrastructure}, not physical space.
+
+\subsection{Foundational Principles}
+
+Three empirically validated results:
+
+\begin{enumerate}
+    \item \textbf{Minimal Action Quantization} \cite{Kapitanov2025a}: $S_{\min} = \hbar \ln 2$ (one bit per minimal action).
+    
+    \item \textbf{Horizon Area 

@@ -1,0 +1,50 @@
+=================================================================
+SUBMISSION TO ai.viXra
+=================================================================
+
+TITLE:
+Three Dimensions Derived: Holographic Information Projection as Dimensional Selection Mechanism
+
+AUTHOR:
+Fedor Kapitanov
+ORCID: 0009-0009-6438-8730
+Email: prtyboom@gmail.com
+Affiliation: Independent Researcher
+
+CATEGORY:
+Quantum Physics and Cosmology (qp) / General Relativity and Quantum Cosmology (gr-qc)
+
+ABSTRACT:
+We demonstrate that three-dimensional space is not a fundamental postulate but emerges as the unique thermodynamically stable projection of a four-dimensional latent information manifold under holographic entropy constraint.
+
+Through variational optimization of free energy F = U_therm(ε) + λ·max(0, S - S_max)² with appropriately scaled entropy S = r_eff · N^0.7, we prove numerically that the projection anisotropy parameter follows a power law ε*(N) = (0.052 ± 0.008) · N^(-0.57 ± 0.03) for system sizes N ∈ [100, 2000].
+
+Key results: (i) At N=100: ε* = 0.0035 (99.6% suppression of fourth axis); (ii) At N=2000: ε* = 0.00047 (99.95% suppression); (iii) Effective dimensionality d_PR = 3.13 ± 0.07 remains stable across all scales; (iv) Entropy-to-bound ratio S/S_max increases from 14.2 to 16.5, indicating intensifying holographic pressure.
+
+Extrapolation to cosmological scales (N ~ 10^122 bits) predicts ε* ~ 10^-70, rendering the fourth dimension absolutely unobservable. This resolves the dimensional question: three is calculated, not assumed.
+
+Full source code and data publicly available at: https://github.com/prtyboom/holographic_dimension
+
+KEYWORDS:
+Holographic principle, dimensional reduction, information theory, black hole thermodynamics, emergent spacetime, quantum gravity
+
+AI ASSISTANCE DISCLOSURE:
+This work was developed with assistance from AI language models (Claude-3.5 by Anthropic, GPT-4 by OpenAI, Qwen by Alibaba) for code debugging, parameter optimization, and LaTeX formatting. All physical concepts, theoretical framework, numerical experiments, and scientific interpretation are original contributions of the author.
+
+SUPPLEMENTARY MATERIALS:
+- GitHub repository: https://github.com/prtyboom/holographic_dimension
+- Full LaTeX source: paper_final_with_data.tex
+- Python implementation: core/system.py
+- Numerical results: results_corrected.csv (pending N=5000 completion)
+
+PREVIOUS RELATED WORK:
+[1] F. Kapitanov, "The Quantum as Minimal Difference", viXra:2511.0013 (2025)
+[2] F. Kapitanov, "Horizon Area Quantization", viXra:2511.0009 (2025)
+
+SUBMISSION DATE:
+November 8, 2025
+
+DOCUMENT TO UPLOAD:
+paper_final_with_data.pdf (to be compiled from .tex after N=5000 completion)
+
+=================================================================

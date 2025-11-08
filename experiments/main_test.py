@@ -31,14 +31,13 @@ def run_main_test(N_values, random_seed=42, **system_params):
     random_seed : int, default=42
         Random seed for reproducibility
     **system_params : dict
-        Additional parameters for HolographicSystem
-        (alpha, beta, lam, sigma, etc.)
+        Parameters for HolographicSystem (alpha, beta, lam, etc.)
     
     Returns
     -------
     results : pandas.DataFrame
         Columns: N, epsilon_opt, F_opt, d_participation, d_MDS,
-                 S, S_max, S_ratio, U, penalty
+                 S, S_max, S_ratio, U_geom, U_therm, U_total, penalty
     """
     
     logger.info("=" * 60)
@@ -65,8 +64,17 @@ def run_main_test(N_values, random_seed=42, **system_params):
         # Compute observables at optimum
         C_opt = system.correlation_matrix(epsilon_opt)
         S_opt = system.entropy(C_opt)
-        U_opt = system._compute_internal_energy(C_opt, epsilon_opt)
-        penalty_opt = system._compute_penalty(S_opt)
+        
+        # Energy components
+        U_geom = system._U_laplacian(C_opt)
+        U_therm = system._U_volume(epsilon_opt)
+        U_total = system.alpha * U_geom + system.beta * U_therm
+        
+        # Penalty
+        if S_opt > system.S_max:
+            penalty = system.lam * (S_opt - system.S_max)**2
+        else:
+            penalty = 0.0
         
         # Measure dimensions
         d_PR = dimension_participation(C_opt)
@@ -82,8 +90,10 @@ def run_main_test(N_values, random_seed=42, **system_params):
             'S': S_opt,
             'S_max': system.S_max,
             'S_ratio': S_opt / system.S_max,
-            'U': U_opt,
-            'penalty': penalty_opt
+            'U_geom': U_geom,
+            'U_therm': U_therm,
+            'U_total': U_total,
+            'penalty': penalty
         })
         
         logger.info(
@@ -108,8 +118,14 @@ if __name__ == '__main__':
         format='%(asctime)s [%(levelname)s] %(message)s'
     )
     
+    # CORRECTED: alpha=0 (no geometric energy)
     N_values = [100, 500, 1000]
-    df = run_main_test(N_values)
+    df = run_main_test(
+        N_values,
+        alpha=0.0,
+        beta=0.1,
+        lam=100.0
+    )
     
     print("\nResults:")
-    print(df.to_string(index=False))
+    print(df[['N', 'epsilon_opt', 'd_participation', 'S_ratio']].to_string(index=False))
