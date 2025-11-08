@@ -1,0 +1,27 @@
+# Виртуальное окружение
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Результаты (можно раскомментировать позже, если не хочешь коммитить)
+# results/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
